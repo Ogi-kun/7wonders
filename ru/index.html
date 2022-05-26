@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор счёта для игры «7 чудес»</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+</head>
+<body>
+    <header><select id="lang-selector"><option value="en">EN</option><option value="ru"selected>RU</option></select></header>
+    <main>
+        <header>Калькулятор счёта для игры «7 чудес»</header>
+		<section class="scoring-card">
+			<header>Поле Чуда света</header>
+			<label for="city">Город</label>
+			<select id="city">
+				<option value="alexandria">Alexandria</option>
+				<option value="babylon">Babylon</option>
+				<option value="ephesus">Éphesos</option>
+				<option value="giza">Gizah</option>
+				<option value="halicarnassus">Halikarnassus</option>
+				<option value="olympia">Olympía</option>
+				<option value="rhodes">Rhódos</option>
+			</select><input type="checkbox" id="sideb"><label for="sideb">Ночь</label><br>
+			<label for="constructed-stages">Возведённые ярусы Чуда света</label><select class="smallnum" id="constructed-stages">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4" disabled>4</option>
+			</select>
+		<footer>Очки: <span id="total-wonder">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Сокровищница</header>
+			<label for="coin-num">Монеты в вашей сокровищнице</label><input type="number" class="smallnum" id="coin-num" min="0" value="0">
+		
+			<footer>Очки: <span id="total-treasure">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Военные конфликты</header>
+			<ul class="military-score">
+				<li><label for="victory-num">Очки победы </label><span class="input-signed">+<input type="number" class="smallnum" id="victory-num" min="0" max="18" value="0"></span></li>
+				<li><label for="defeat-num">Очки поражения </label><span class="input-signed">−<input type="number" class="smallnum" id="defeat-num" min="0" max="6" value="0"></span></li>
+			</ul>
+			<footer>Очки: <span id="total-military">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Гражданские здания</header>
+			<label>Победные очки за <span class="blue">синие</span> карты в вашем городе<input type="number" class="smallnum" id="civic-points" min="0" value="0"></label>
+			<footer>Очки: <span id="total-civic">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Торговые здания</header>
+			<label>Победные очки за <span class="yellow">жёлтые</span> карты в вашем городе:</label>
+			<ul>
+				<li>
+					<input type="checkbox" id="commerce-arena"><label for="commerce-arena">Арена</label>
+					<div class="collapsible"><label>Возведённые ярусы Чуда света в вашем городе<input type="number" class="smallnum" id="commerce-arena-wonderstages" min="0" value="0" disabled></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="commerce-chamber"><label for="commerce-chamber">Торговая палата</label>
+					<div class="collapsible"><label><span class="grey">Серые</span> карты в вашем городе<input type="number" class="smallnum" id="commerce-chamber-greycards" min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="commerce-haven"><label for="commerce-haven">Гавань</label>
+					<div class="collapsible"><label><span class="brown">Коричневые</span> карты в вашем городе<input type="number" class="smallnum" id="commerce-haven-browncards" min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="commerce-lighthouse"><label for="commerce-lighthouse">Маяк</label>
+					<div class="collapsible"><label><span class="yellow">Жёлтые</span> карты в вашем городе<input type="number" class="smallnum" id="commerce-lighthouse-yellowcards" min="1" value="1"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="commerce-ludus"><label for="commerce-ludus">Школа гладиаторов</label>
+					<div class="collapsible"><label><span class="red">Красные</span> карты в вашем городе<input type="number" class="smallnum" id="commerce-ludus-redcards" min="0" value="0"></label></div>
+				</li>
+			</ul>
+			<div class="note">Стартовый ресурс не считается <span class="brown">коричневой</span>/<span class="grey">серой</span> картой</div>
+			<footer>Очки: <span id="total-commerce">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Наука</header>
+			<label><span class="green">Зелёные</span> карты в вашем городе:</label>
+				<label for="science-gearcards"><img alt="gears" width="14px" height="16px" src="../images/gear.svg"></label><input type="number" class="smallnum" id="science-gearcards" min="0" max="4" value="0">
+				<label for="science-tabletcards"><img alt="tablets" width="14px" height="16px" src="../images/tablet.svg"></label><input type="number" class="smallnum" id="science-tabletcards" min="0" max="4" value="0">
+				<label for="science-compasscards"><img alt="compasses" width="14px" height="16px" src="../images/compass.svg"></label><input type="number" class="smallnum" id="science-compasscards" min="0" max="4" value="0">
+			<ul>
+				<li><label><input type="checkbox" id="guild-scientists">Гильдия учёных</label></li>
+				<li><label><input type="checkbox" id="science-wildcards-babylon2" disabled>Вавилон: 2-й ярус Чуда света</label></li>
+			</ul>
+			<div class="science-formulae">
+				<ul>
+					<li>Наборы одинаковых символов: <nobr><span id="formula-gears">0</span><sup>2</sup> + <span  id="formula-tablets">0</span><sup>2</sup> + <span  id="formula-compasses">0</span><sup>2</sup> = <span id="formula-total-identical">0</span></nobr></li>
+					<li>Наборы трёх разных символов: <nobr><span id="formula-setsof3">0</span> × 7 = <span id="formula-total-setsof3">0</span></nobr></li>
+				</ul>
+			</div>
+			<footer>Очки: <span id="total-science">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Гильдии</header>
+			<label>Победные очки за <span class="purple">Фиолетовые</span> карты в вашем городе:</label>
+			<ul>
+				<li>
+					<input type="checkbox" id="guild-workers"><label for="guild-workers">Гильдия рабочих</label>
+					<div class="collapsible"><label><span class="brown">Коричневые</span> карты в вашем городе<input type="number" id="guild-workers-neighbours-browncards" class="smallnum" min="0" value="0"></label></div>
+				</li>
+				<li><input type="checkbox" id="guild-craftsmens"><label for="guild-craftsmens">Гильдия ремесленников</label>
+					<div class="collapsible"><label><span class="grey">Серые</span> карты в двух соседних городах<input type="number" id="guild-craftsmens-neighbours-greycards" class="smallnum"min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="guild-magistrates"><label for="guild-magistrates">Гильдия судей</label>
+					<div class="collapsible"><label><span class="blue">Синие</span> карты в двух соседних городах<input type="number" id="guild-magistrates-neighbours-bluecards"  class="smallnum" min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="guild-traders"><label for="guild-traders">Гильдия торговцев</label>
+					<div class="collapsible"><label><span class="yellow">Жёлтые</span> карты в двух соседних городах<input type="number" id="guild-traders-neighbours-yellowcards" class="smallnum"min="0" value="0"></label></div>
+				</li>
+				<li><input type="checkbox" id="guild-spies"><label for="guild-spies">Гильдия шпионов</label>
+					<div class="collapsible"><label><span class="red">Красные</span> карты в двух соседних городах<input type="number" id="guild-spies-neighbours-redcards" class="smallnum"min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="guild-philosophers"><label for="guild-philosophers">Гильдия философов</label>
+					<div class="collapsible"><label><span class="green">Зелёные</span> карты в двух соседних городах<input id="guild-philosophers-neighbours-greencards" type="number" class="smallnum"min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="guild-builders"><label for="guild-builders">Гильдия строителей</label>
+					<div class="collapsible">
+						<label>Возведённые ярусы Чуда света:</label>
+						<ul>
+							<li><label>В вашем городе<input type="number" id="guild-builders-stages" class="smallnum" min="0" value="0" disabled></label></li>
+							<li><label>В двух соседних городах<input type="number" id="guild-builders-neighbours-stages" class="smallnum"min="0" value="0"></label></li>
+						</ul>
+						
+					</div>
+				</li>
+				<li><input type="checkbox" id="guild-decorators"><label for="guild-decorators">Гильдия декораторов</label>
+					<div class="collapsible"><label><input type="checkbox" id="guild-decorators-constructedwonder" disabled>Полностью возведённое Чудо света</label>
+				</li>
+				<li><input type="checkbox" id="guild-shipowners"><label for="guild-shipowners">Гильдия судовладельцев</label>
+					<div class="collapsible">
+						<ul>
+						<li><label><span class="brown">Коричневые</span> карты в <strong>вашем</strong> городе<input type="number" class="smallnum" id="guild-shipowners-browncards" min="0" value="0"></li>
+						<li><label><span class="grey">Серые</span> карты в <strong>вашем</strong> городе<input type="number" class="smallnum" id="guild-shipowners-greycards" min="0" value="0"></label></li>
+						<li><label><span class="purple">Фиолетовые</span> карты в <strong>вашем</strong> городе<input type="number" class="smallnum" id="guild-shipowners-purplecards" min="1" value="1"></label></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<div class="note">Стартовый ресурс не считается <span class="brown">коричневой</span>/<span class="grey">серой</span> картой</div>
+			<footer>Очки: <span id="total-guilds">0</span></footer>
+		</section>
+		<section class="scoring-card" id="grand-total-card">
+			<div>Счёт: <span id="grand-total">0</span></div>
+		</section>
+    </main>
+    <footer id="page-footer">
+    © 2022 Georgy Markov
+    </footer>
+</body>
+</html>

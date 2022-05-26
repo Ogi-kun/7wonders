@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Wonders Score Calculator</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+</head>
+<body>
+    <header><select id="lang-selector"><option value="en"selected>EN</option><option value="ru">RU</option></select></header>
+    <main>
+        <header>7 Wonders Score Calculator</header>
+		<section class="scoring-card">
+			<header>City Board</header>
+			<label for="city">City</label>
+			<select id="city">
+				<option value="alexandria">Alexandria</option>
+				<option value="babylon">Babylon</option>
+				<option value="ephesus">Éphesos</option>
+				<option value="giza">Gizah</option>
+				<option value="halicarnassus">Halikarnassus</option>
+				<option value="olympia">Olympía</option>
+				<option value="rhodes">Rhódos</option>
+			</select><input type="checkbox" id="sideb"><label for="sideb">Night</label><br>
+			<label for="constructed-stages">Constructed stages of Wonder</label><select class="smallnum" id="constructed-stages">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4" disabled>4</option>
+			</select>
+		<footer>Points: <span id="total-wonder">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Treasure</header>
+			<label for="coin-num">Coins in your Treasure</label><input type="number" class="smallnum" id="coin-num" min="0" value="0">
+		
+			<footer>Points: <span id="total-treasure">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Military</header>
+			<ul class="military-score">
+				<li><label for="victory-num">Victory points </label><span class="input-signed">+<input type="number" class="smallnum" id="victory-num" min="0" max="18" value="0"></span></li>
+				<li><label for="defeat-num">Defeat points </label><span class="input-signed">−<input type="number" class="smallnum" id="defeat-num" min="0" max="6" value="0"></span></li>
+			</ul>
+			<footer>Points: <span id="total-military">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Civics</header>
+			<label>Victory points on <span class="blue">Blue</span> cards in your City<input type="number" class="smallnum" id="civic-points" min="0" value="0"></label>
+			<footer>Points: <span id="total-civic">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Commerce</header>
+			<label>Victory points on <span class="yellow">Yellow</span> cards in your City:</label>
+			<ul>
+				<li>
+					<input type="checkbox" id="commerce-arena"><label for="commerce-arena">Arena</label>
+					<div class="collapsible"><label>Constructed stages of Wonder in your City<input type="number" class="smallnum" id="commerce-arena-wonderstages" min="0" value="0" disabled></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="commerce-chamber"><label for="commerce-chamber">Chamber of Commerce</label>
+					<div class="collapsible"><label><span class="grey">Grey</span> cards in your City<input type="number" class="smallnum" id="commerce-chamber-greycards" min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="commerce-haven"><label for="commerce-haven">Haven</label>
+					<div class="collapsible"><label><span class="brown">Brown</span> cards in your City<input type="number" class="smallnum" id="commerce-haven-browncards" min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="commerce-lighthouse"><label for="commerce-lighthouse">Lighthouse</label>
+					<div class="collapsible"><label><span class="yellow">Yellow</span> cards in your City (incl. this)<input type="number" class="smallnum" id="commerce-lighthouse-yellowcards" min="1" value="1"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="commerce-ludus"><label for="commerce-ludus">Ludus</label>
+					<div class="collapsible"><label><span class="red">Red</span> cards in your City<input type="number" class="smallnum" id="commerce-ludus-redcards" min="0" value="0"></label></div>
+				</li>
+			</ul>
+			<div class="note">Starting resource does not count as a <span class="brown">Brown</span>/<span class="grey">Grey</span> card</div>
+			<footer>Points: <span id="total-commerce">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Science</header>
+			<label><span class="green">Green</span> cards in your City:</label>
+				<label for="science-gearcards"><img alt="gears" width="14px" height="16px" src="../images/gear.svg"></label><input type="number" class="smallnum" id="science-gearcards" min="0" max="4" value="0">
+				<label for="science-tabletcards"><img alt="tablets" width="14px" height="16px" src="../images/tablet.svg"></label><input type="number" class="smallnum" id="science-tabletcards" min="0" max="4" value="0">
+				<label for="science-compasscards"><img alt="compasses" width="14px" height="16px" src="../images/compass.svg"></label><input type="number" class="smallnum" id="science-compasscards" min="0" max="4" value="0">
+			<ul>
+				<li><label><input type="checkbox" id="guild-scientists">Scientists Guild</label></li>
+				<li><label><input type="checkbox" id="science-wildcards-babylon2" disabled>Babylon Wonder stage 2</label></li>
+			</ul>
+			<div class="science-formulae">
+				<ul>
+					<li>Sets of identical symbols: <nobr><span id="formula-gears">0</span><sup>2</sup> + <span  id="formula-tablets">0</span><sup>2</sup> + <span  id="formula-compasses">0</span><sup>2</sup> = <span id="formula-total-identical">0</span></nobr></li>
+					<li>Sets of 3 symbols: <nobr><span id="formula-setsof3">0</span> × 7 = <span id="formula-total-setsof3">0</span></nobr></li>
+				</ul>
+			</div>
+			<footer>Points: <span id="total-science">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Guilds</header>
+			<label>Victory points on <span class="purple">Purple</span> cards in your City:</label>
+			<ul>
+				<li>
+					<input type="checkbox" id="guild-workers"><label for="guild-workers">Workers Guild</label>
+					<div class="collapsible"><label><span class="brown">Brown</span> cards in <strong>your neighbours’</strong> Cities<input type="number" id="guild-workers-neighbours-browncards" class="smallnum" min="0" value="0"></label></div>
+				</li>
+				<li><input type="checkbox" id="guild-craftsmens"><label for="guild-craftsmens">Craftsmens Guild</label>
+					<div class="collapsible"><label><span class="grey">Grey</span> cards in <strong>your neighbours’</strong> Cities<input type="number" id="guild-craftsmens-neighbours-greycards" class="smallnum"min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="guild-magistrates"><label for="guild-magistrates">Magistrates Guild</label>
+					<div class="collapsible"><label><span class="blue">Blue</span> cards in <strong>your neighbours’</strong> Cities<input type="number" id="guild-magistrates-neighbours-bluecards"  class="smallnum" min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="guild-traders"><label for="guild-traders">Traders Guild</label>
+					<div class="collapsible"><label><span class="yellow">Yellow</span> cards in <strong>your neighbours’</strong> Cities<input type="number" id="guild-traders-neighbours-yellowcards" class="smallnum"min="0" value="0"></label></div>
+				</li>
+				<li><input type="checkbox" id="guild-spies"><label for="guild-spies">Spies Guild</label>
+					<div class="collapsible"><label><span class="red">Red</span> cards in <strong>your neighbours’</strong> Cities<input type="number" id="guild-spies-neighbours-redcards" class="smallnum"min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="guild-philosophers"><label for="guild-philosophers">Philosophers Guild</label>
+					<div class="collapsible"><label><span class="green">Green</span> cards in <strong>your neighbours’</strong> Cities<input id="guild-philosophers-neighbours-greencards" type="number" class="smallnum"min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="guild-builders"><label for="guild-builders">Builders Guild</label>
+					<div class="collapsible">
+						<label>Constructed stages of Wonder:</label>
+						<ul>
+							<li><label>In <strong>your</strong> City<input type="number" id="guild-builders-stages" class="smallnum" min="0" value="0" disabled></label></li>
+							<li><label>In <strong>your neighbours’</strong> Cities<input type="number" id="guild-builders-neighbours-stages" class="smallnum"min="0" value="0"></label></li>
+						</ul>
+						
+					</div>
+				</li>
+				<li><input type="checkbox" id="guild-decorators"><label for="guild-decorators">Decorators Guild</label>
+					<div class="collapsible"><label><input type="checkbox" id="guild-decorators-constructedwonder" disabled>Fully constructed Wonder in <strong>your</strong> City</label>
+				</li>
+				<li><input type="checkbox" id="guild-shipowners"><label for="guild-shipowners">Shipowners Guild</label>
+					<div class="collapsible">
+						<ul>
+						<li><label><span class="brown">Brown</span> cards in <strong>your</strong> City<input type="number" class="smallnum" id="guild-shipowners-browncards" min="0" value="0"></li>
+						<li><label><span class="grey">Grey</span> cards in <strong>your</strong> City<input type="number" class="smallnum" id="guild-shipowners-greycards" min="0" value="0"></label></li>
+						<li><label><span class="purple">Purple</span> cards in <strong>your</strong> City (incl. this)<input type="number" class="smallnum" id="guild-shipowners-purplecards" min="1" value="1"></label></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<div class="note">Starting resource does not count as a <span class="brown">Brown</span>/<span class="grey">Grey</span> card</div>
+			<footer>Points: <span id="total-guilds">0</span></footer>
+		</section>
+		<section class="scoring-card" id="grand-total-card">
+			<div>Score: <span id="grand-total">0</span></div>
+		</section>
+    </main>
+    <footer id="page-footer">
+    © 2022 Georgy Markov
+    </footer>
+</body>
+</html>
