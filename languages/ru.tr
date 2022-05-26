@@ -1,0 +1,189 @@
+msgid 7 Wonders Score Calculator
+msgstr Калькулятор счёта для игры «7 чудес»
+
+msgid City Board
+msgstr Поле Чуда света
+
+msgid City
+msgstr Город
+
+msgid Alexandria
+msgstr Alexandria
+
+msgid Babylon
+msgstr Babylon
+
+msgid Éphesos
+msgstr Éphesos
+
+msgid Gizah
+msgstr Gizah
+
+msgid Halikarnassus
+msgstr Halikarnassus
+
+msgid Olympía
+msgstr Olympía
+
+msgid Rhódos
+msgstr Rhódos
+
+msgid Night
+msgstr Ночь
+
+msgid Constructed stages of Wonder
+msgstr Возведённые ярусы Чуда света
+
+msgid Points
+msgstr Очки
+
+msgid Treasure
+msgstr Сокровищница
+
+msgid Coins in your Treasure
+msgstr Монеты в вашей сокровищнице
+
+msgid Military
+msgstr Военные конфликты
+
+msgid Victory points
+msgstr Очки победы
+
+msgid Defeat points
+msgstr Очки поражения
+
+msgid Civics
+msgstr Гражданские здания
+
+msgid Victory points on <span class="blue">Blue</span> cards in your City
+msgstr Победные очки за <span class="blue">синие</span> карты в вашем городе
+
+msgid Commerce
+msgstr Торговые здания
+
+msgid Victory points on <span class="yellow">Yellow</span> cards in your City
+msgstr Победные очки за <span class="yellow">жёлтые</span> карты в вашем городе
+
+msgid Arena
+msgstr Арена
+
+msgid Constructed stages of Wonder in your City
+msgstr Возведённые ярусы Чуда света в вашем городе
+
+msgid Chamber of Commerce
+msgstr Торговая палата
+
+msgid <span class="grey">Grey</span> cards in your City
+msgstr <span class="grey">Серые</span> карты в вашем городе
+
+msgid Haven
+msgstr Гавань
+
+msgid <span class="brown">Brown</span> cards in your City
+msgstr <span class="brown">Коричневые</span> карты в вашем городе
+
+msgid Lighthouse
+msgstr Маяк
+
+msgid <span class="yellow">Yellow</span> cards in your City (incl. this)
+msgstr <span class="yellow">Жёлтые</span> карты в вашем городе
+
+msgid Ludus
+msgstr Школа гладиаторов
+
+msgid <span class="red">Red</span> cards in your City
+msgstr <span class="red">Красные</span> карты в вашем городе
+
+msgid Starting resource does not count as a <span class="brown">Brown</span>/<span class="grey">Grey</span> card
+msgstr Стартовый ресурс не считается <span class="brown">коричневой</span>/<span class="grey">серой</span> картой
+
+msgid Science
+msgstr Наука
+
+msgid <span class="green">Green</span> cards in your City
+msgstr <span class="green">Зелёные</span> карты в вашем городе
+
+msgid Scientists Guild
+msgstr Гильдия учёных
+
+msgid Babylon Wonder stage 2
+msgstr Вавилон: 2-й ярус Чуда света
+
+msgid Sets of identical symbols
+msgstr Наборы одинаковых символов
+
+msgid Sets of 3 symbols
+msgstr Наборы трёх разных символов
+
+msgid Guilds
+msgstr Гильдии
+
+msgid Victory points on <span class="purple">Purple</span> cards in your City
+msgstr Победные очки за <span class="purple">Фиолетовые</span> карты в вашем городе
+
+msgid Workers Guild
+msgstr Гильдия рабочих
+
+msgid <span class="brown">Brown</span> cards in <strong>your neighbours’</strong> Cities
+msgstr <span class="brown">Коричневые</span> карты в вашем городе
+
+msgid Craftsmens Guild
+msgstr Гильдия ремесленников
+
+msgid <span class="grey">Grey</span> cards in <strong>your neighbours’</strong> Cities
+msgstr <span class="grey">Серые</span> карты в двух соседних городах
+
+msgid Magistrates Guild
+msgstr Гильдия судей
+
+msgid <span class="blue">Blue</span> cards in <strong>your neighbours’</strong> Cities
+msgstr <span class="blue">Синие</span> карты в двух соседних городах
+
+msgid Traders Guild
+msgstr Гильдия торговцев
+
+msgid <span class="yellow">Yellow</span> cards in <strong>your neighbours’</strong> Cities
+msgstr <span class="yellow">Жёлтые</span> карты в двух соседних городах
+
+msgid Spies Guild
+msgstr Гильдия шпионов
+
+msgid <span class="red">Red</span> cards in <strong>your neighbours’</strong> Cities
+msgstr <span class="red">Красные</span> карты в двух соседних городах
+
+msgid Philosophers Guild
+msgstr Гильдия философов
+
+msgid <span class="green">Green</span> cards in <strong>your neighbours’</strong> Cities
+msgstr <span class="green">Зелёные</span> карты в двух соседних городах
+
+msgid Builders Guild
+msgstr Гильдия строителей
+
+msgid In <strong>your</strong> City
+msgstr В вашем городе
+
+msgid In <strong>your neighbours’</strong> Cities
+msgstr В двух соседних городах
+
+msgid Decorators Guild
+msgstr Гильдия декораторов
+
+msgid Fully constructed Wonder in <strong>your</strong> City
+msgstr Полностью возведённое Чудо света
+
+msgid Shipowners Guild
+msgstr Гильдия судовладельцев
+
+msgid <span class="brown">Brown</span> cards in <strong>your</strong> City
+msgstr <span class="brown">Коричневые</span> карты в <strong>вашем</strong> городе
+
+msgid <span class="grey">Grey</span> cards in <strong>your</strong> City
+msgstr <span class="grey">Серые</span> карты в <strong>вашем</strong> городе
+
+msgid <span class="purple">Purple</span> cards in <strong>your</strong> City (incl. this)
+msgstr <span class="purple">Фиолетовые</span> карты в <strong>вашем</strong> городе
+
+msgid Score
+msgstr Счёт
+

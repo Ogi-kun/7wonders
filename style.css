@@ -1,0 +1,146 @@
+body {
+    font-family: sans-serif;
+    font-size: 10pt;
+    background-color: #F0F0F0;
+
+
+}
+main > header {
+    text-align: center;
+    font-size: 24pt;
+}
+
+section > header {
+    text-align: center;
+    font-weight: bold;
+	font-size: 12pt;
+    margin-bottom: 4px;
+}
+
+section > footer {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 4px;
+	font-size: 11pt;
+}
+
+section {
+    border: 4px solid #e7934d;
+    margin: 24px auto 24px auto;
+    box-shadow: 0 4px 16px #00000050;
+}
+
+section {
+    padding: 4px 8px;
+    background-color: white;
+    max-width: 420px;
+}
+
+.collapsible {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .collapsible {
+    display: block;
+}
+
+div.note {
+    font-style: italic;
+}
+
+input.smallnum {
+    width: 36px;
+}
+
+.smallnum {
+    margin-left: 4px;
+}
+
+.brown {
+    color: #97503A;
+}
+
+.grey {
+    color: #7C7E81;
+}
+
+.red {
+    color: #C4121C;
+}
+
+.green {
+    color: #008844;
+}
+
+.blue {
+    color: #0386CB;
+}
+
+.purple {
+    color: #804F89;
+}
+
+.yellow {
+    color: #F48333;
+}
+
+.brown, .grey, .red, .green, .blue, .purple, .yellow {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+div.collapsible {
+    padding-left: 24px;
+	margin-bottom: 4px;
+}
+
+.note {
+	font-size: 9pt;
+    margin: 8px 0;
+}
+
+.science-formulae {
+	font-size: 9pt;
+    margin: 8px 0;
+}
+
+#page-footer {
+    margin-top: 2em;
+    color: gray;
+    font-size: 9pt;
+    text-align: center;
+}
+
+#grand-total-card {
+    background-color: #e7934d;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+#lang-selector {
+    margin: 0 0 0 auto;
+    display: block;
+}
+
+ul.military-score {
+    display: table;
+}
+ul.military-score > li {
+    display: table-row;
+}
+ul.military-score > li > label {
+    display: table-cell;
+}
+
+.input-signed {
+	margin-left: 4px;
+}
+.input-signed > input {
+    margin-left: 0;
+}
