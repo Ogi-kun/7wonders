@@ -144,3 +144,8 @@ ul.military-score > li > label {
 .input-signed > input {
     margin-left: 0;
 }
+
+img.label-icon {
+    position: relative;
+    top: 3px;
+}
