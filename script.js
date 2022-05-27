@@ -17,8 +17,27 @@ const Science = Object.freeze({
 class City {
     constructor() {}
 
-    index = 0
-    sideB = false
+    _index = 0
+    set index(value) {
+        this._index = value;
+        if (this.constructedStages > this.wonderStages().length) {
+            this.constructedStages = this.wonderStages().length;
+        }
+    }
+    get index() {
+        return this._index;
+    }
+
+    _sideB = false
+    set sideB(value) {
+        this._sideB = value;
+        if (this.constructedStages > this.wonderStages().length) {
+            this.constructedStages = this.wonderStages().length;
+        }
+    }
+    get sideB() {
+        return this._sideB;
+    }
 
     constructedStages = 0
 
