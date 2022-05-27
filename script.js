@@ -263,7 +263,7 @@ function optimizeScience(gearNum, tabletNum, compassNum, out_wildcards) {
 window.onload = function (_) {
 
     document.getElementById("lang-selector").addEventListener('change', (event) => {
-        window.location.href='../'+event.target.value+'/index.html';
+        window.location.href='../'+event.target.value;
     });
 
     document.getElementById("city").addEventListener("change", (event) => {
