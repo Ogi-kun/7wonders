@@ -14,80 +14,83 @@ const Science = Object.freeze({
     compass: 2,
 });
 
-var city = {
-    index : 0,
-    sideB: false,
-    constructedStages: 0,
+class City {
+    constructor() {}
 
-    treasure: 0,
+    index = 0
+    sideB = false
 
-    victoryNum: 0,
-    defeatNum: 0,
+    constructedStages = 0
 
-    bluePointsNum: 0,
+    treasure = 0
 
-    gearCardsNum: 0,
-    tabletCardsNum: 0,
-    compassCardsNum: 0,
+    victoryNum = 0
+    defeatNum = 0
 
-    greyCardsNum: 0,
-    brownCardNum: 0,
-    yellowCardsNum: 1,
-    redCardsNum: 0,
-    purpleCardsNum: 1,
+    bluePointsNum = 0
 
-    commerceArena: false,
-    commerceChamber: false,
-    commerceHaven: false,
-    commerceLighthouse: false,
-    commerceLudus: false,
+    gearCardsNum = 0
+    tabletCardsNum = 0
+    compassCardsNum = 0
 
-    guildScientists: false,
-    guildWorkers: false,
-    guildCraftsmens: false,
-    guildMagistrates: false,
-    guildTraders: false,
-    guildBuilders: false,
-    guildSpies: false,
-    guildPhilosophers: false,
-    guildDecorators: false,
-    guildShipowners: false,
+    greyCardsNum = 0
+    brownCardNum = 0
+    yellowCardsNum = 1
+    redCardsNum = 0
+    purpleCardsNum = 1
 
-    neighboursBrownCardsNum: 0,
-    neighboursGreyCardsNum: 0,
-    neighboursBlueCardsNum: 0,
-    neighboursYellowCardsNum: 0,
-    neighboursRedCardsNum: 0,
-    neighboursGreenCardsNum: 0,
+    commerceArena = false
+    commerceChamber = false
+    commerceHaven = false
+    commerceLighthouse = false
+    commerceLudus = false
 
-    neighboursWonderStages: 0,
+    guildScientists = false
+    guildWorkers = false
+    guildCraftsmens = false
+    guildMagistrates = false
+    guildTraders = false
+    guildBuilders = false
+    guildSpies = false
+    guildPhilosophers = false
+    guildDecorators = false
+    guildShipowners = false
 
-    wonderStages: function() {
+    neighboursBrownCardsNum = 0
+    neighboursGreyCardsNum = 0
+    neighboursBlueCardsNum = 0
+    neighboursYellowCardsNum = 0
+    neighboursRedCardsNum = 0
+    neighboursGreenCardsNum = 0
+
+    neighboursWonderStages = 0
+
+    wonderStages() {
         const stats = citiesStats[this.index];
         return this.sideB ? stats.wonderScoresB : stats.wonderScores;
-    },
+    }
 
-    wonderScore: function() {
+    wonderScore() {
         var score = 0;
         for (let i = 0; i < this.constructedStages; i++) {
             score += this.wonderStages()[i];
         }
         return score;
-    },
+    }
 
-    treasureScore: function() {
+    treasureScore() {
         return Math.floor(this.treasure/3);
-    },
+    }
 
-    militaryScore: function() {
+    militaryScore() {
         return this.victoryNum - this.defeatNum;
-    },
+    }
 
-    civicScore: function() {
+    civicScore() {
         return this.bluePointsNum;
-    },
+    }
 
-    commerceScore: function() {
+    commerceScore() {
         var result = 0;
         if (this.commerceArena) {
             result += 1*this.constructedStages;
@@ -105,9 +108,9 @@ var city = {
             result += 1*this.redCardsNum;
         }
         return result;
-    },
+    }
 
-    scienceWildcardsNum: function() {
+    scienceWildcardsNum() {
         var result = 0;
         if (citiesStats[this.index].name == "babylon" && this.constructedStages >= 2) {
             result++;
@@ -116,15 +119,15 @@ var city = {
             result++;
         }
         return result;
-    },
+    }
 
-    scienceScore: function() {
+    scienceScore() {
         var arr = Array(this.scienceWildcardsNum()).fill(0);
         return optimizeScience(this.gearCardsNum, this.tabletCardsNum, 
                 this.compassCardsNum, arr);
-    },
+    }
 
-    guildsScore: function() {
+    guildsScore() {
         var result = 0;
         if (this.guildWorkers) {
             result += 1*this.neighboursBrownCardsNum;
@@ -160,14 +163,16 @@ var city = {
         }
         
         return result;
-    },
+    }
 
-    score: function() {
+    score() {
         return this.wonderScore() + this.treasureScore() + this.militaryScore()
                 + this.civicScore() + this.commerceScore() + this.scienceScore()
                 + this.guildsScore();
-    },
+    }
 }
+
+city = new City();
 
 function updateView(city) {
     const stats = citiesStats[city.index];
