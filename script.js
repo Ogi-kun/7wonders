@@ -197,8 +197,12 @@ function updateView(city) {
     const stats = citiesStats[city.index];
     const wonderScores = city.sideB ? stats.wonderScoresB : stats.wonderScores;
 
-    document.getElementById("constructed-stages").childNodes
-            .forEach((child) => child.disabled = Number(child.value) > wonderScores.length);
+    document.getElementById("constructed-stages").childNodes.forEach((child) => {
+        child.disabled = Number(child.value) > wonderScores.length;
+        if (Number(child.value) == city.constructedStages) {
+            child.selected = true;
+        }
+    });
 
     document.getElementById("science-wildcards-babylon2").checked = 
             stats.name == "babylon" && city.constructedStages >= 2;
