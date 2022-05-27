@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score-Rechner für 7 Wonders</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+</head>
+<body>
+    <header><select id="lang-selector"><option value="de"selected>DE</option><option value="en">EN</option><option value="ru">RU</option></select></header>
+    <main>
+        <header>Score-Rechner für 7 Wonders</header>
+		<section class="scoring-card">
+			<header>Weltwunder</header>
+			<label for="city">Stadt</label>
+			<select id="city">
+				<option value="alexandria">Alexandria</option>
+				<option value="babylon">Babylon</option>
+				<option value="ephesus">Éphesos</option>
+				<option value="giza">Gizah</option>
+				<option value="halicarnassus">Halikarnassus</option>
+				<option value="olympia">Olympía</option>
+				<option value="rhodes">Rhódos</option>
+			</select><input type="checkbox" id="sideb"><label for="sideb">Nacht</label><br>
+			<label for="constructed-stages">Vollendeten Weltwunder-Abschnitten</label><select class="smallnum" id="constructed-stages">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4" disabled>4</option>
+			</select>
+		<footer>Punkte: <span id="total-wonder">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Vermögen</header>
+			<label for="coin-num">Münzen in deiner Vermögen</label><input type="number" class="smallnum" id="coin-num" min="0" value="0">
+		
+			<footer>Punkte: <span id="total-treasure">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Militärkonflikte</header>
+			<ul class="military-score">
+				<li><label for="victory-num">Siegpunkte </label><span class="input-signed">+<input type="number" class="smallnum" id="victory-num" min="0" max="18" value="0"></span></li>
+				<li><label for="defeat-num">Niederlagepunkte </label><span class="input-signed">−<input type="number" class="smallnum" id="defeat-num" min="0" max="6" value="0"></span></li>
+			</ul>
+			<footer>Punkte: <span id="total-military">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Zivilbauten</header>
+			<label>Siegpunkte auf den <span class="blue">Blauen</span> Karten in deiner Stadt<input type="number" class="smallnum" id="civic-points" min="0" value="0"></label>
+			<footer>Punkte: <span id="total-civic">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Handelsgebäude</header>
+			<label>Siegpunkte auf den <span class="yellow">Gelben</span> Karten in deiner Stadt:</label>
+			<ul>
+				<li>
+					<input type="checkbox" id="commerce-arena"><label for="commerce-arena">Arena</label>
+					<div class="collapsible"><label>Vollendeten Weltwunder-Abschnitten in deiner Stadt<input type="number" class="smallnum" id="commerce-arena-wonderstages" min="0" value="0" disabled></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="commerce-chamber"><label for="commerce-chamber">Handelskammer</label>
+					<div class="collapsible"><label><span class="grey">Graue</span> Karten in deiner Stadt<input type="number" class="smallnum" id="commerce-chamber-greycards" min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="commerce-haven"><label for="commerce-haven">Hafen</label>
+					<div class="collapsible"><label><span class="brown">Braune</span> Karten in deiner Stadt<input type="number" class="smallnum" id="commerce-haven-browncards" min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="commerce-lighthouse"><label for="commerce-lighthouse">Leuchtturm</label>
+					<div class="collapsible"><label><span class="yellow">Gelben</span> Karten in deiner Stadt (einschl. dieser Kart)<input type="number" class="smallnum" id="commerce-lighthouse-yellowcards" min="1" value="1"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="commerce-ludus"><label for="commerce-ludus">Gladiatorenschule</label>
+					<div class="collapsible"><label><span class="red">Rote</span> Karten in deiner Stadt<input type="number" class="smallnum" id="commerce-ludus-redcards" min="0" value="0"></label></div>
+				</li>
+			</ul>
+			<div class="note">Startressource zählt nicht als <span class="brown">Braune</span>/<span class="grey">Graue</span> Kart</div>
+			<footer>Punkte: <span id="total-commerce">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Wissenschaft</header>
+			<label><span class="green">Grüne</span> Karten in deiner Stadt:</label>
+				<label for="science-gearcards"><img alt="gears" width="14px" height="16px" src="../images/gear.svg"></label><input type="number" class="smallnum" id="science-gearcards" min="0" max="4" value="0">
+				<label for="science-tabletcards"><img alt="tablets" width="14px" height="16px" src="../images/tablet.svg"></label><input type="number" class="smallnum" id="science-tabletcards" min="0" max="4" value="0">
+				<label for="science-compasscards"><img alt="compasses" width="14px" height="16px" src="../images/compass.svg"></label><input type="number" class="smallnum" id="science-compasscards" min="0" max="4" value="0">
+			<ul>
+				<li><label><input type="checkbox" id="guild-scientists">Gilde der Wissenschaftler</label></li>
+				<li><label><input type="checkbox" id="science-wildcards-babylon2" disabled>Babylon: Weltwunder-Abschnitten 2</label></li>
+			</ul>
+			<div class="science-formulae">
+				<ul>
+					<li>Sets aus gleiche Symbolen: <nobr><span id="formula-gears">0</span><sup>2</sup> + <span  id="formula-tablets">0</span><sup>2</sup> + <span  id="formula-compasses">0</span><sup>2</sup> = <span id="formula-total-identical">0</span></nobr></li>
+					<li>Sets aus 3 verschiedenen Symbolen: <nobr><span id="formula-setsof3">0</span> × 7 = <span id="formula-total-setsof3">0</span></nobr></li>
+				</ul>
+			</div>
+			<footer>Punkte: <span id="total-science">0</span></footer>
+		</section>
+		<section class="scoring-card">
+			<header>Gilden</header>
+			<label>Siegpunkte auf den <span class="purple">Violette</span> Karten in deiner Stadt:</label>
+			<ul>
+				<li>
+					<input type="checkbox" id="guild-workers"><label for="guild-workers">Gilde der Arbeiter</label>
+					<div class="collapsible"><label><span class="brown">Braune</span> Karten in deinen Nachbarstädten<input type="number" id="guild-workers-neighbours-browncards" class="smallnum" min="0" value="0"></label></div>
+				</li>
+				<li><input type="checkbox" id="guild-craftsmens"><label for="guild-craftsmens">Gilde der Handwerker</label>
+					<div class="collapsible"><label><span class="grey">Graue</span> Karten in deinen Nachbarstädten<input type="number" id="guild-craftsmens-neighbours-greycards" class="smallnum"min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="guild-magistrates"><label for="guild-magistrates">Gilde der Magistraten</label>
+					<div class="collapsible"><label><span class="blue">Blaue</span> Karten in deinen Nachbarstädten<input type="number" id="guild-magistrates-neighbours-bluecards"  class="smallnum" min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="guild-traders"><label for="guild-traders">Gilde der Händler</label>
+					<div class="collapsible"><label><span class="yellow">Gelben</span> Karten in deinen Nachbarstädten<input type="number" id="guild-traders-neighbours-yellowcards" class="smallnum"min="0" value="0"></label></div>
+				</li>
+				<li><input type="checkbox" id="guild-spies"><label for="guild-spies">Gilde der Spione</label>
+					<div class="collapsible"><label><span class="red">Rote</span> Karten in deinen Nachbarstädten<input type="number" id="guild-spies-neighbours-redcards" class="smallnum"min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="guild-philosophers"><label for="guild-philosophers">Gilde der Philosophen</label>
+					<div class="collapsible"><label><span class="green">Grüne</span> Karten in deinen Nachbarstädten<input id="guild-philosophers-neighbours-greencards" type="number" class="smallnum"min="0" value="0"></label></div>
+				</li>
+				<li>
+					<input type="checkbox" id="guild-builders"><label for="guild-builders">Gilde der Baumeister</label>
+					<div class="collapsible">
+						<label>Vollendeten Weltwunder-Abschnitten:</label>
+						<ul>
+							<li><label>in deiner Stadt<input type="number" id="guild-builders-stages" class="smallnum" min="0" value="0" disabled></label></li>
+							<li><label>in deinen Nachbarstädten<input type="number" id="guild-builders-neighbours-stages" class="smallnum"min="0" value="0"></label></li>
+						</ul>
+						
+					</div>
+				</li>
+				<li><input type="checkbox" id="guild-decorators"><label for="guild-decorators">Gilde der Dekorateure</label>
+					<div class="collapsible"><label><input type="checkbox" id="guild-decorators-constructedwonder" disabled>Vollständig aufgebautes Weltwunder</label>
+				</li>
+				<li><input type="checkbox" id="guild-shipowners"><label for="guild-shipowners">Gilde der Reeder</label>
+					<div class="collapsible">
+						<ul>
+						<li><label><span class="brown">Braune</span> Karten in deiner Stadt<input type="number" class="smallnum" id="guild-shipowners-browncards" min="0" value="0"></li>
+						<li><label><span class="grey">Graune</span> Karten in deiner Stadt<input type="number" class="smallnum" id="guild-shipowners-greycards" min="0" value="0"></label></li>
+						<li><label><span class="purple">Violette</span> Karten in deiner Stadt (einschl. dieser Kart)<input type="number" class="smallnum" id="guild-shipowners-purplecards" min="1" value="1"></label></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<div class="note">Startressource zählt nicht als <span class="brown">Braune</span>/<span class="grey">Graue</span> Kart</div>
+			<footer>Punkte: <span id="total-guilds">0</span></footer>
+		</section>
+		<section class="scoring-card" id="grand-total-card">
+			<div>Endwertung: <span id="grand-total">0</span></div>
+		</section>
+    </main>
+    <footer id="page-footer">
+    © 2022 Georgy Markov
+    </footer>
+</body>
+</html>
