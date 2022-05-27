@@ -56,6 +56,8 @@ void main(string[] args) {
 	
 
 	foreach(lang, dictionary; dictionaries.byPair) {
+		auto file = chainPath(lang, outFile);
+		writeln("Compiling ", file);
 
 		string replacer(Captures!(string) match) {
 			auto msgid = match[1].strip;
@@ -86,7 +88,6 @@ void main(string[] args) {
 		auto output = src.replaceAll!replacer(pattern);
 
 		mkdirRecurse(lang);
-		auto file = chainPath(lang, outFile);
 		std.file.write(file, output);
 
 	}
