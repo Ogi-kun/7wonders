@@ -1,9 +1,3 @@
-/*
-var city = "alexandria";
-var sideB = false;
-var wonderStages = 0;
-*/
-
 const citiesStats = [
     {name: "alexandria",    wonderScores : [3, 0, 7], wonderScoresB : [0, 0, 7]},
     {name: "babylon",       wonderScores : [3, 0, 7], wonderScoresB : [0, 0]},
