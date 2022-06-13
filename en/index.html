@@ -35,21 +35,21 @@
 		</section>
 		<section class="scoring-card">
 			<header>Treasure</header>
-			<label for="coin-num">Coins in your Treasure</label><input type="number" class="smallnum" id="coin-num" min="0" value="0">
+			<label for="coin-num">Coins in your Treasure</label><input type="number" class="smallnum" id="coin-num" min="0" value="0" inputmode="decimal">
 		
 			<footer>Points: <span id="total-treasure">0</span></footer>
 		</section>
 		<section class="scoring-card">
 			<header>Military</header>
 			<ul class="military-score">
-				<li><label for="victory-num">Victory points </label><span class="input-signed">+<input type="number" class="smallnum" id="victory-num" min="0" max="18" value="0"></span></li>
-				<li><label for="defeat-num">Defeat points </label><span class="input-signed">−<input type="number" class="smallnum" id="defeat-num" min="0" max="6" value="0"></span></li>
+				<li><label for="victory-num">Victory points </label><span class="input-signed">+<input type="number" class="smallnum" id="victory-num" min="0" max="18" value="0" inputmode="decimal"></span></li>
+				<li><label for="defeat-num">Defeat points </label><span class="input-signed">−<input type="number" class="smallnum" id="defeat-num" min="0" max="6" value="0" inputmode="decimal"></span></li>
 			</ul>
 			<footer>Points: <span id="total-military">0</span></footer>
 		</section>
 		<section class="scoring-card">
 			<header>Civics</header>
-			<label for="civic-points">Victory points on <span class="blue">Blue</span> cards in your City</label><input type="number" class="smallnum" id="civic-points" min="0" value="0">
+			<label for="civic-points">Victory points on <span class="blue">Blue</span> cards in your City</label><input type="number" class="smallnum" id="civic-points" min="0" value="0" inputmode="decimal">
 			<footer>Points: <span id="total-civic">0</span></footer>
 		</section>
 		<section class="scoring-card">
@@ -58,23 +58,23 @@
 			<ul>
 				<li>
 					<input type="checkbox" id="commerce-arena"><label for="commerce-arena">Arena</label>
-					<div class="collapsible"><label for="commerce-arena-wonderstages">Constructed stages of Wonder in your City</label><input type="number" class="smallnum" id="commerce-arena-wonderstages" min="0" value="0" disabled></div>
+					<div class="collapsible"><label for="commerce-arena-wonderstages">Constructed stages of Wonder in your City</label><input type="number" class="smallnum" id="commerce-arena-wonderstages" min="0" value="0" inputmode="decimal" disabled></div>
 				</li>
 				<li>
 					<input type="checkbox" id="commerce-chamber"><label for="commerce-chamber">Chamber of Commerce</label>
-					<div class="collapsible"><label for="commerce-chamber-greycards"><span class="grey">Grey</span> cards in your City</label><input type="number" class="smallnum" id="commerce-chamber-greycards" min="0" value="0"></div>
+					<div class="collapsible"><label for="commerce-chamber-greycards"><span class="grey">Grey</span> cards in your City</label><input type="number" class="smallnum" id="commerce-chamber-greycards" min="0" value="0" inputmode="decimal"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="commerce-haven"><label for="commerce-haven">Haven</label>
-					<div class="collapsible"><label for="commerce-haven-browncards"><span class="brown">Brown</span> cards in your City</label><input type="number" class="smallnum" id="commerce-haven-browncards" min="0" value="0"></div>
+					<div class="collapsible"><label for="commerce-haven-browncards"><span class="brown">Brown</span> cards in your City</label><input type="number" class="smallnum" id="commerce-haven-browncards" min="0" value="0" inputmode="decimal"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="commerce-lighthouse"><label for="commerce-lighthouse">Lighthouse</label>
-					<div class="collapsible"><label for="commerce-lighthouse-yellowcards"><span class="yellow">Yellow</span> cards in your City (incl. this)</label><input type="number" class="smallnum" id="commerce-lighthouse-yellowcards" min="1" value="1"></div>
+					<div class="collapsible"><label for="commerce-lighthouse-yellowcards"><span class="yellow">Yellow</span> cards in your City (incl. this)</label><input type="number" class="smallnum" id="commerce-lighthouse-yellowcards" min="1" value="1" inputmode="decimal"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="commerce-ludus"><label for="commerce-ludus">Ludus</label>
-					<div class="collapsible"><label for="commerce-ludus-redcards"><span class="red">Red</span> cards in your City</label><input type="number" class="smallnum" id="commerce-ludus-redcards" min="0" value="0"></div>
+					<div class="collapsible"><label for="commerce-ludus-redcards"><span class="red">Red</span> cards in your City</label><input type="number" class="smallnum" id="commerce-ludus-redcards" min="0" value="0" inputmode="decimal"></div>
 				</li>
 			</ul>
 			<div class="note">Starting resource does not count as a <span class="brown">Brown</span>/<span class="grey">Grey</span> card</div>
@@ -83,9 +83,9 @@
 		<section class="scoring-card">
 			<header>Science</header>
 			<label><span class="green">Green</span> cards in your City:</label>
-				<span class="nobr"><label for="science-gearcards"><img class="label-icon" alt="gears" width="14px" height="16px" src="../images/gear.svg"></label><input type="number" class="smallnum" id="science-gearcards" min="0" max="4" value="0">
-				<label for="science-tabletcards"><img class="label-icon" alt="tablets" width="14px" height="16px" src="../images/tablet.svg"></label><input type="number" class="smallnum" id="science-tabletcards" min="0" max="4" value="0">
-				<label for="science-compasscards"><img class="label-icon" alt="compasses" width="14px" height="16px" src="../images/compass.svg"></label><input type="number" class="smallnum" id="science-compasscards" min="0" max="4" value="0"></span>
+				<span class="nobr"><label for="science-gearcards"><img class="label-icon" alt="gears" width="14px" height="16px" src="../images/gear.svg"></label><input type="number" class="smallnum" id="science-gearcards" min="0" max="4" value="0" inputmode="decimal">
+				<label for="science-tabletcards"><img class="label-icon" alt="tablets" width="14px" height="16px" src="../images/tablet.svg"></label><input type="number" class="smallnum" id="science-tabletcards" min="0" max="4" value="0" inputmode="decimal">
+				<label for="science-compasscards"><img class="label-icon" alt="compasses" width="14px" height="16px" src="../images/compass.svg"></label><input type="number" class="smallnum" id="science-compasscards" min="0" max="4" value="0" inputmode="decimal"></span>
 			<ul>
 				<li><label><input type="checkbox" id="guild-scientists">Scientists Guild</label></li>
 				<li><label><input type="checkbox" id="science-wildcards-babylon2" disabled>Babylon Wonder stage 2</label></li>
@@ -104,33 +104,33 @@
 			<ul>
 				<li>
 					<input type="checkbox" id="guild-workers"><label for="guild-workers">Workers Guild</label>
-					<div class="collapsible"><label for="guild-workers-neighbours-browncards"><span class="brown">Brown</span> cards in <strong>your neighbours’</strong> Cities</label><input type="number" id="guild-workers-neighbours-browncards" class="smallnum" min="0" value="0"></div>
+					<div class="collapsible"><label for="guild-workers-neighbours-browncards"><span class="brown">Brown</span> cards in <strong>your neighbours’</strong> Cities</label><input type="number" id="guild-workers-neighbours-browncards" class="smallnum" min="0" value="0" inputmode="decimal"></div>
 				</li>
 				<li><input type="checkbox" id="guild-craftsmens"><label for="guild-craftsmens">Craftsmens Guild</label>
-					<div class="collapsible"><label for="guild-craftsmens-neighbours-greycards"><span class="grey">Grey</span> cards in <strong>your neighbours’</strong> Cities</label><input type="number" id="guild-craftsmens-neighbours-greycards" class="smallnum" min="0" value="0"></div>
+					<div class="collapsible"><label for="guild-craftsmens-neighbours-greycards"><span class="grey">Grey</span> cards in <strong>your neighbours’</strong> Cities</label><input type="number" id="guild-craftsmens-neighbours-greycards" class="smallnum" min="0" value="0" inputmode="decimal"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="guild-magistrates"><label for="guild-magistrates">Magistrates Guild</label>
-					<div class="collapsible"><label for="guild-magistrates-neighbours-bluecards"><span class="blue">Blue</span> cards in <strong>your neighbours’</strong> Cities</label><input type="number" id="guild-magistrates-neighbours-bluecards" class="smallnum" min="0" value="0"></div>
+					<div class="collapsible"><label for="guild-magistrates-neighbours-bluecards"><span class="blue">Blue</span> cards in <strong>your neighbours’</strong> Cities</label><input type="number" id="guild-magistrates-neighbours-bluecards" class="smallnum" min="0" value="0" inputmode="decimal"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="guild-traders"><label for="guild-traders">Traders Guild</label>
-					<div class="collapsible"><label for="guild-traders-neighbours-yellowcards"><span class="yellow">Yellow</span> cards in <strong>your neighbours’</strong> Cities</label><input type="number" id="guild-traders-neighbours-yellowcards" class="smallnum"min="0" value="0"></div>
+					<div class="collapsible"><label for="guild-traders-neighbours-yellowcards"><span class="yellow">Yellow</span> cards in <strong>your neighbours’</strong> Cities</label><input type="number" id="guild-traders-neighbours-yellowcards" class="smallnum" min="0" value="0" inputmode="decimal"></div>
 				</li>
 				<li><input type="checkbox" id="guild-spies"><label for="guild-spies">Spies Guild</label>
-					<div class="collapsible"><label for="guild-spies-neighbours-redcards"><span class="red">Red</span> cards in <strong>your neighbours’</strong> Cities</label><input type="number" id="guild-spies-neighbours-redcards" class="smallnum"min="0" value="0"></div>
+					<div class="collapsible"><label for="guild-spies-neighbours-redcards"><span class="red">Red</span> cards in <strong>your neighbours’</strong> Cities</label><input type="number" id="guild-spies-neighbours-redcards" class="smallnum" min="0" value="0" inputmode="decimal"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="guild-philosophers"><label for="guild-philosophers">Philosophers Guild</label>
-					<div class="collapsible"><label for="guild-philosophers-neighbours-greencards"><span class="green">Green</span> cards in <strong>your neighbours’</strong> Cities</label><input id="guild-philosophers-neighbours-greencards" type="number" class="smallnum"min="0" value="0"></div>
+					<div class="collapsible"><label for="guild-philosophers-neighbours-greencards"><span class="green">Green</span> cards in <strong>your neighbours’</strong> Cities</label><input id="guild-philosophers-neighbours-greencards" type="number" class="smallnum" min="0" value="0" inputmode="decimal"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="guild-builders"><label for="guild-builders">Builders Guild</label>
 					<div class="collapsible">
 						<label>Constructed stages of Wonder:</label>
 						<ul>
-							<li><label for="guild-builders-stages">In <strong>your</strong> City</label><input type="number" id="guild-builders-stages" class="smallnum" min="0" value="0" disabled></li>
-							<li><label for="guild-builders-neighbours-stages">In <strong>your neighbours’</strong> Cities</label><input type="number" id="guild-builders-neighbours-stages" class="smallnum"min="0" value="0"></li>
+							<li><label for="guild-builders-stages">In <strong>your</strong> City</label><input type="number" id="guild-builders-stages" class="smallnum" min="0" value="0" inputmode="decimal" disabled></li>
+							<li><label for="guild-builders-neighbours-stages">In <strong>your neighbours’</strong> Cities</label><input type="number" id="guild-builders-neighbours-stages" class="smallnum" min="0" value="0" inputmode="decimal"></li>
 						</ul>
 						
 					</div>
@@ -141,9 +141,9 @@
 				<li><input type="checkbox" id="guild-shipowners"><label for="guild-shipowners">Shipowners Guild</label>
 					<div class="collapsible">
 						<ul>
-						<li><label for="guild-shipowners-browncards"><span class="brown">Brown</span> cards in <strong>your</strong> City</label><input type="number" class="smallnum" id="guild-shipowners-browncards" min="0" value="0"></li>
-						<li><label for="guild-shipowners-greycards"><span class="grey">Grey</span> cards in <strong>your</strong> City</label><input type="number" class="smallnum" id="guild-shipowners-greycards" min="0" value="0"></li>
-						<li><label for="guild-shipowners-purplecards"><span class="purple">Purple</span> cards in <strong>your</strong> City (incl. this)</label><input type="number" class="smallnum" id="guild-shipowners-purplecards" min="1" value="1"></li>
+						<li><label for="guild-shipowners-browncards"><span class="brown">Brown</span> cards in <strong>your</strong> City</label><input type="number" class="smallnum" id="guild-shipowners-browncards" min="0" value="0" inputmode="decimal"></li>
+						<li><label for="guild-shipowners-greycards"><span class="grey">Grey</span> cards in <strong>your</strong> City</label><input type="number" class="smallnum" id="guild-shipowners-greycards" min="0" value="0" inputmode="decimal"></li>
+						<li><label for="guild-shipowners-purplecards"><span class="purple">Purple</span> cards in <strong>your</strong> City (incl. this)</label><input type="number" class="smallnum" id="guild-shipowners-purplecards" min="1" value="1" inputmode="decimal"></li>
 						</ul>
 					</div>
 				</li>
