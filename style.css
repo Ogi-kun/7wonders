@@ -149,3 +149,7 @@ img.label-icon {
     position: relative;
     top: 3px;
 }
+
+.nobr {
+    white-space: nowrap;
+}
