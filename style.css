@@ -159,3 +159,11 @@ input, select {
     border-radius: 0;
     background: none;
 }
+
+input:focus, select:focus {
+    outline-color: #E7934D;
+}
+
+input {
+    accent-color: #D5721A;
+}
