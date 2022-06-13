@@ -48,7 +48,7 @@
 		</section>
 		<section class="scoring-card">
 			<header>Zivilbauten</header>
-			<label>Siegpunkte auf den <span class="blue">Blauen</span> Karten in deiner Stadt<input type="number" class="smallnum" id="civic-points" min="0" value="0"></label>
+			<label for="civic-points">Siegpunkte auf den <span class="blue">Blauen</span> Karten in deiner Stadt</label><input type="number" class="smallnum" id="civic-points" min="0" value="0">
 			<footer>Punkte: <span id="total-civic">0</span></footer>
 		</section>
 		<section class="scoring-card">
@@ -57,23 +57,23 @@
 			<ul>
 				<li>
 					<input type="checkbox" id="commerce-arena"><label for="commerce-arena">Arena</label>
-					<div class="collapsible"><label>Vollendeten Weltwunder-Abschnitten in deiner Stadt<input type="number" class="smallnum" id="commerce-arena-wonderstages" min="0" value="0" disabled></label></div>
+					<div class="collapsible"><label for="commerce-arena-wonderstages">Vollendeten Weltwunder-Abschnitten in deiner Stadt</label><input type="number" class="smallnum" id="commerce-arena-wonderstages" min="0" value="0" disabled></div>
 				</li>
 				<li>
 					<input type="checkbox" id="commerce-chamber"><label for="commerce-chamber">Handelskammer</label>
-					<div class="collapsible"><label><span class="grey">Graue</span> Karten in deiner Stadt<input type="number" class="smallnum" id="commerce-chamber-greycards" min="0" value="0"></label></div>
+					<div class="collapsible"><label for="commerce-chamber-greycards"><span class="grey">Graue</span> Karten in deiner Stadt</label><input type="number" class="smallnum" id="commerce-chamber-greycards" min="0" value="0"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="commerce-haven"><label for="commerce-haven">Hafen</label>
-					<div class="collapsible"><label><span class="brown">Braune</span> Karten in deiner Stadt<input type="number" class="smallnum" id="commerce-haven-browncards" min="0" value="0"></label></div>
+					<div class="collapsible"><label for="commerce-haven-browncards"><span class="brown">Braune</span> Karten in deiner Stadt</label><input type="number" class="smallnum" id="commerce-haven-browncards" min="0" value="0"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="commerce-lighthouse"><label for="commerce-lighthouse">Leuchtturm</label>
-					<div class="collapsible"><label><span class="yellow">Gelben</span> Karten in deiner Stadt (einschl. dieser Kart)<input type="number" class="smallnum" id="commerce-lighthouse-yellowcards" min="1" value="1"></label></div>
+					<div class="collapsible"><label for="commerce-lighthouse-yellowcards"><span class="yellow">Gelben</span> Karten in deiner Stadt (einschl. dieser Kart)</label><input type="number" class="smallnum" id="commerce-lighthouse-yellowcards" min="1" value="1"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="commerce-ludus"><label for="commerce-ludus">Gladiatorenschule</label>
-					<div class="collapsible"><label><span class="red">Rote</span> Karten in deiner Stadt<input type="number" class="smallnum" id="commerce-ludus-redcards" min="0" value="0"></label></div>
+					<div class="collapsible"><label for="commerce-ludus-redcards"><span class="red">Rote</span> Karten in deiner Stadt</label><input type="number" class="smallnum" id="commerce-ludus-redcards" min="0" value="0"></div>
 				</li>
 			</ul>
 			<div class="note">Startressource zählt nicht als <span class="brown">Braune</span>/<span class="grey">Graue</span> Kart</div>
@@ -103,33 +103,33 @@
 			<ul>
 				<li>
 					<input type="checkbox" id="guild-workers"><label for="guild-workers">Gilde der Arbeiter</label>
-					<div class="collapsible"><label><span class="brown">Braune</span> Karten in deinen Nachbarstädten<input type="number" id="guild-workers-neighbours-browncards" class="smallnum" min="0" value="0"></label></div>
+					<div class="collapsible"><label for="guild-workers-neighbours-browncards"><span class="brown">Braune</span> Karten in deinen Nachbarstädten</label><input type="number" id="guild-workers-neighbours-browncards" class="smallnum" min="0" value="0"></div>
 				</li>
 				<li><input type="checkbox" id="guild-craftsmens"><label for="guild-craftsmens">Gilde der Handwerker</label>
-					<div class="collapsible"><label><span class="grey">Graue</span> Karten in deinen Nachbarstädten<input type="number" id="guild-craftsmens-neighbours-greycards" class="smallnum"min="0" value="0"></label></div>
+					<div class="collapsible"><label for="guild-craftsmens-neighbours-greycards"><span class="grey">Graue</span> Karten in deinen Nachbarstädten</label><input type="number" id="guild-craftsmens-neighbours-greycards" class="smallnum" min="0" value="0"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="guild-magistrates"><label for="guild-magistrates">Gilde der Magistraten</label>
-					<div class="collapsible"><label><span class="blue">Blaue</span> Karten in deinen Nachbarstädten<input type="number" id="guild-magistrates-neighbours-bluecards"  class="smallnum" min="0" value="0"></label></div>
+					<div class="collapsible"><label for="guild-magistrates-neighbours-bluecards"><span class="blue">Blaue</span> Karten in deinen Nachbarstädten</label><input type="number" id="guild-magistrates-neighbours-bluecards" class="smallnum" min="0" value="0"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="guild-traders"><label for="guild-traders">Gilde der Händler</label>
-					<div class="collapsible"><label><span class="yellow">Gelben</span> Karten in deinen Nachbarstädten<input type="number" id="guild-traders-neighbours-yellowcards" class="smallnum"min="0" value="0"></label></div>
+					<div class="collapsible"><label for="guild-traders-neighbours-yellowcards"><span class="yellow">Gelben</span> Karten in deinen Nachbarstädten</label><input type="number" id="guild-traders-neighbours-yellowcards" class="smallnum"min="0" value="0"></div>
 				</li>
 				<li><input type="checkbox" id="guild-spies"><label for="guild-spies">Gilde der Spione</label>
-					<div class="collapsible"><label><span class="red">Rote</span> Karten in deinen Nachbarstädten<input type="number" id="guild-spies-neighbours-redcards" class="smallnum"min="0" value="0"></label></div>
+					<div class="collapsible"><label for="guild-spies-neighbours-redcards"><span class="red">Rote</span> Karten in deinen Nachbarstädten</label><input type="number" id="guild-spies-neighbours-redcards" class="smallnum"min="0" value="0"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="guild-philosophers"><label for="guild-philosophers">Gilde der Philosophen</label>
-					<div class="collapsible"><label><span class="green">Grüne</span> Karten in deinen Nachbarstädten<input id="guild-philosophers-neighbours-greencards" type="number" class="smallnum"min="0" value="0"></label></div>
+					<div class="collapsible" for="guild-philosophers-neighbours-greencards"><label for="guild-philosophers-neighbours-greencards"><span class="green">Grüne</span> Karten in deinen Nachbarstädten</label><input id="guild-philosophers-neighbours-greencards" type="number" class="smallnum"min="0" value="0"></div>
 				</li>
 				<li>
 					<input type="checkbox" id="guild-builders"><label for="guild-builders">Gilde der Baumeister</label>
 					<div class="collapsible">
 						<label>Vollendeten Weltwunder-Abschnitten:</label>
 						<ul>
-							<li><label>in deiner Stadt<input type="number" id="guild-builders-stages" class="smallnum" min="0" value="0" disabled></label></li>
-							<li><label>in deinen Nachbarstädten<input type="number" id="guild-builders-neighbours-stages" class="smallnum"min="0" value="0"></label></li>
+							<li><label for="guild-builders-stages">in deiner Stadt</label><input type="number" id="guild-builders-stages" class="smallnum" min="0" value="0" disabled></li>
+							<li><label for="guild-builders-neighbours-stages">in deinen Nachbarstädten</label><input type="number" id="guild-builders-neighbours-stages" class="smallnum"min="0" value="0"></li>
 						</ul>
 						
 					</div>
@@ -140,9 +140,9 @@
 				<li><input type="checkbox" id="guild-shipowners"><label for="guild-shipowners">Gilde der Reeder</label>
 					<div class="collapsible">
 						<ul>
-						<li><label><span class="brown">Braune</span> Karten in deiner Stadt<input type="number" class="smallnum" id="guild-shipowners-browncards" min="0" value="0"></li>
-						<li><label><span class="grey">Graune</span> Karten in deiner Stadt<input type="number" class="smallnum" id="guild-shipowners-greycards" min="0" value="0"></label></li>
-						<li><label><span class="purple">Violette</span> Karten in deiner Stadt (einschl. dieser Kart)<input type="number" class="smallnum" id="guild-shipowners-purplecards" min="1" value="1"></label></li>
+						<li><label for="guild-shipowners-browncards"><span class="brown">Braune</span> Karten in deiner Stadt</label><input type="number" class="smallnum" id="guild-shipowners-browncards" min="0" value="0"></li>
+						<li><label for="guild-shipowners-greycards"><span class="grey">Graune</span> Karten in deiner Stadt</label><input type="number" class="smallnum" id="guild-shipowners-greycards" min="0" value="0"></li>
+						<li><label for="guild-shipowners-purplecards"><span class="purple">Violette</span> Karten in deiner Stadt (einschl. dieser Kart)</label><input type="number" class="smallnum" id="guild-shipowners-purplecards" min="1" value="1"></li>
 						</ul>
 					</div>
 				</li>
