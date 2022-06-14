@@ -162,7 +162,7 @@ img.label-icon {
     white-space: nowrap;
 }
 
-input, select {
+input[type="number"], select {
     border-width: 0 0 1px 0;
     border-radius: 0;
     border-color: black;
