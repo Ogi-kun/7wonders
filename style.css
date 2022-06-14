@@ -7,7 +7,7 @@ body {
     background-color: #F0F0F0;
 }
 
-input, select {
+input[type="number"], select {
     -webkit-appearance:none;
     font-size: 16pt;
     font-family: sans-serif;
