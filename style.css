@@ -1,5 +1,5 @@
 html {
-    font-size: 16pt;
+    font-size: 14pt;
     font-family: sans-serif;
 }
 
@@ -9,7 +9,7 @@ body {
 
 input[type="number"], select {
     -webkit-appearance:none;
-    font-size: 16pt;
+    font-size: 14pt;
     font-family: sans-serif;
     color: black;
 }
@@ -31,7 +31,7 @@ section > footer {
     text-align: center;
     font-weight: bold;
     margin-top: 4px;
-	font-size: 16pt;
+	font-size: 14pt;
 }
 
 section {
@@ -175,9 +175,4 @@ input:focus, select:focus {
 
 input {
     accent-color: #D5721A;
-}
-
-input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
 }
